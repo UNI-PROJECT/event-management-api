@@ -2,10 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { IUserInterface } from '../../repository/interface/user-interface';
 
 @Injectable()
-export class UserDeleteService {
+export class UserFindAllService {
   constructor(private repo: IUserInterface) {}
 
-  async delete(id: string) {
-    return await this.repo.delete(id);
+  async findAll() {
+    return await this.repo.findAll();
   }
 }
