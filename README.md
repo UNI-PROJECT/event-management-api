@@ -1,4 +1,4 @@
-# event-managent-api
+# API de gestão de eventos
 
 
 ## Descriçãp
@@ -21,10 +21,14 @@ $ yarn install
 
 ## Rodar a aplicação
 
+A aplicaçãp roda na porta 5000
+
 ```bash
 $ yarn run start
 
 ```
+http://localhost:5000/
+
 
 
 Como forma de garantir que a aplicação tenha o comportamenteo esperado, escrevi testes unitários
