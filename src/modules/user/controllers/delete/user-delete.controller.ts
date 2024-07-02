@@ -1,4 +1,4 @@
 import { Controller } from '@nestjs/common';
 
 @Controller('user')
-export class UserFindDeleteController {}
+export class UserDeleteController {}

@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UserFindUpdateController } from './user-find-update.controller';
+import { UserFindUpdateController } from './user-update.controller';
 
 describe('UserFindUpdateController', () => {
   let controller: UserFindUpdateController;
