@@ -1,22 +1,22 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { IEventInterface } from '../../repository/interface/vanue-interface';
-import { EventUpdateService } from './event-update.service';
+import { IVenueInterface } from '../../repository/interface/vanue-interface';
+import { VenueUpdateService } from './venue-update.service';
 
 describe('UserUpdateService', () => {
-  let service: EventUpdateService;
+  let service: VenueUpdateService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        EventUpdateService,
+        VenueUpdateService,
         {
-          provide: IEventInterface,
+          provide: IVenueInterface,
           useValue: {},
         },
       ],
     }).compile();
 
-    service = module.get<EventUpdateService>(EventUpdateService);
+    service = module.get<VenueUpdateService>(VenueUpdateService);
   });
 
   it('should be defined', () => {

@@ -1,22 +1,22 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EventFindOneService } from './event-find-one.service';
-import { IEventInterface } from '../../repository/interface/vanue-interface';
+import { VenueFindOneService } from './venue-find-one.service';
+import { IVenueInterface } from '../../repository/interface/vanue-interface';
 
 describe('EventFindOneService', () => {
-  let service: EventFindOneService;
+  let service: VenueFindOneService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        EventFindOneService,
+        VenueFindOneService,
         {
-          provide: IEventInterface,
+          provide: IVenueInterface,
           useValue: {},
         },
       ],
     }).compile();
 
-    service = module.get<EventFindOneService>(EventFindOneService);
+    service = module.get<VenueFindOneService>(VenueFindOneService);
   });
 
   it('should be defined', () => {

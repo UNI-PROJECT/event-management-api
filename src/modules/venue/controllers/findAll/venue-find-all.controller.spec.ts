@@ -1,24 +1,24 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EventFindAllController } from './event-find-all.controller';
-import { EventFindAllService } from '../../services/find-all/event-find-all.service';
-import { IEventInterface } from '../../repository/interface/vanue-interface';
+import { EventFindAllController } from './venue-find-all.controller';
+import { IVenueInterface } from '../../repository/interface/vanue-interface';
+import { VenueFindAllService } from '../../services/find-all/venue-find-all.service';
 
 describe('EventFindAllController', () => {
   let controller: EventFindAllController;
-  let service: EventFindAllService;
+  let service: VenueFindAllService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [EventFindAllController],
       providers: [
         {
-          provide: EventFindAllService,
+          provide: VenueFindAllService,
           useValue: {
             findAll: jest.fn(),
           },
         },
         {
-          provide: IEventInterface,
+          provide: IVenueInterface,
           useValue: {
             findAll: jest.fn(),
           },
@@ -27,7 +27,7 @@ describe('EventFindAllController', () => {
     }).compile();
 
     controller = module.get<EventFindAllController>(EventFindAllController);
-    service = module.get<EventFindAllService>(EventFindAllService);
+    service = module.get<VenueFindAllService>(VenueFindAllService);
   });
 
   it('should be defined', () => {

@@ -1,22 +1,22 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EventDeleteService } from './event-delete.service';
-import { IEventInterface } from '../../repository/interface/vanue-interface';
+import { VenueDeleteService } from './venue-delete.service';
+import { IVenueInterface } from '../../repository/interface/vanue-interface';
 
 describe('EventDeleteService', () => {
-  let service: EventDeleteService;
+  let service: VenueDeleteService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        EventDeleteService,
+        VenueDeleteService,
         {
-          provide: IEventInterface,
+          provide: IVenueInterface,
           useValue: {},
         },
       ],
     }).compile();
 
-    service = module.get<EventDeleteService>(EventDeleteService);
+    service = module.get<VenueDeleteService>(VenueDeleteService);
   });
 
   it('should be defined', () => {

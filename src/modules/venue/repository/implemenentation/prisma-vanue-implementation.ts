@@ -1,12 +1,12 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../../../prisma/prisma.service';
-import { messages } from 'src/errorMessages';
+import { messages } from '../../../../errorMessages';
 import { Venue } from '@prisma/client';
-import { CreateVenueDto } from '../../dtos/user-input-type';
+import { CreateVenueDto } from '../../dtos/venue-input-type';
 import { IVenueInterface } from '../interface/vanue-interface';
 
 @Injectable()
-export class PrismaEventRepository implements IVenueInterface {
+export class PrismaVenueRepository implements IVenueInterface {
   constructor(private prisma: PrismaService) {}
   async findOne(id: string): Promise<Venue> {
     const value = this.prisma.venue.findUnique({ where: { id: id } });
