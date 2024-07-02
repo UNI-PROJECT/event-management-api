@@ -5,12 +5,9 @@ import { IBookingInterface } from './repository/interface/ticket-interface';
 import { BookingFindAllService } from './services/find-all/booking-find-all.service';
 import { BookingFindOneService } from './services/find-one/booking-find-one.service';
 import { BookingCreateService } from './services/create/booking-create.service';
-import { CreateController } from './create/create.controller';
-import { DeleteController } from './delete/delete.controller';
-import { UpdateController } from './update/update.controller';
-import { UpdateController } from './constrollers/update/update.controller';
-import { CreateController } from './constrollers/create/create.controller';
-import { UpdateController } from './constrollers/update/update.controller';
+import { UpdateController } from './controllers/update/update.controller';
+import { CreateController } from './controllers/create/create.controller';
+import { DeleteController } from './controllers/delete/delete.controller';
 
 @Module({
   providers: [
@@ -20,6 +17,6 @@ import { UpdateController } from './constrollers/update/update.controller';
     BookingFindOneService,
     { provide: IBookingInterface, useClass: PrismaBookingRepository },
   ],
-  controllers: [CreateController, DeleteController, UpdateController],
+  controllers: [CreateController, UpdateController, DeleteController],
 })
 export class BookingModule {}
