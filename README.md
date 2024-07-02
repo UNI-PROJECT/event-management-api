@@ -6,7 +6,12 @@ Este repositório contém a implementação de uma API de gestão de eventos, de
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installati
+## Instalation
+
+```bash
+$ install -g @nestjs/cli
+
+```
 
 
 ```bash
