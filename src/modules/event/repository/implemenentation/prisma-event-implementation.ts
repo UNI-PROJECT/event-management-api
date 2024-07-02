@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../../../prisma/prisma.service';
-import { messages } from 'src/errorMessages';
 import { Event } from '@prisma/client';
 import { CreateEventDto } from '../../dtos/user-input-type';
 import { IEventInterface } from '../interface/event-interface';
+import { messages } from 'src/utils/errorMessages';
 
 @Injectable()
 export class PrismaEventRepository implements IEventInterface {

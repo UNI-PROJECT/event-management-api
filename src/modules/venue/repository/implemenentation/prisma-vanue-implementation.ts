@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../../../prisma/prisma.service';
-import { messages } from '../../../../errorMessages';
+import { messages } from '../../../../utils/errorMessages';
 import { Venue } from '@prisma/client';
 import { CreateVenueDto } from '../../dtos/venue-input-type';
 import { IVenueInterface } from '../interface/vanue-interface';

@@ -2,8 +2,8 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { IUserInterface } from '../interface/user-interface';
 import { CreateUserDto } from '../../dtos/user-input-type';
 import { PrismaService } from '../../../prisma/prisma.service';
-import { messages } from 'src/errorMessages';
 import { User } from '@prisma/client';
+import { messages } from 'src/utils/errorMessages';
 
 @Injectable()
 export class PrismaUserRepository implements IUserInterface {
