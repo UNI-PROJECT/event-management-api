@@ -1,5 +1,5 @@
 import { Venue } from '@prisma/client';
-import { CreateVenueDto } from '../../dtos/user-input-type';
+import { CreateVenueDto } from '../../dtos/venue-input-type';
 
 export abstract class IVenueInterface {
   abstract create(data: CreateVenueDto): Promise<Venue>;

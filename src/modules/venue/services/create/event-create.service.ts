@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { IEventInterface } from '../../repository/interface/vanue-interface';
-import { CreateEventDto } from '../../dtos/user-input-type';
+import { IVenueInterface } from '../../repository/interface/vanue-interface';
+import { CreateVenueDto } from '../../dtos/venue-input-type';
 
 @Injectable()
-export class EventCreateService {
-  constructor(readonly repo: IEventInterface) {}
+export class VenueCreateService {
+  constructor(readonly repo: IVenueInterface) {}
 
-  async create(data: CreateEventDto) {
+  async create(data: CreateVenueDto) {
     return await this.repo.create(data);
   }
 }
