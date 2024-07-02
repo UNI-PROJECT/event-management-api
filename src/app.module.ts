@@ -4,6 +4,7 @@ import { ParticipantModule } from './modules/participant/participant.module';
 import { EventModule } from './modules/event/event.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { PrismaModule } from './modules/prisma/prisma.module';
+import { VenueModule } from './modules/venue/event.module';
 @Module({
   imports: [
     UserModule,
@@ -11,6 +12,7 @@ import { PrismaModule } from './modules/prisma/prisma.module';
     EventModule,
     ParticipantModule,
     PrismaModule,
+    VenueModule,
   ],
   controllers: [],
   providers: [],
