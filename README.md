@@ -28,6 +28,8 @@ $ yarn run start
 
 
 Como forma de garantir que a aplicação tenha o comportamenteo esperado, escrevi testes unitários
+![Descrição da imagem](./img//captura.png)
+
 ## Rodar Testes unitário
 
 ```bash
